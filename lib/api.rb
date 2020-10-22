@@ -5,6 +5,6 @@ class API
         # binding.pry
         uri = URI(url)
         response = Net::HTTP.get(uri) # => String
-        hash = JSON.parse(response)
+        hash.new = JSON.parse(response)
     end
 end
