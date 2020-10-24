@@ -22,6 +22,6 @@ class API
             movie.release_date = movie_hash["release_date"]
             movie.rt_score = movie_hash["rt_score"]
         end
-        binding.pry
+        # binding.pry
     end
 end
