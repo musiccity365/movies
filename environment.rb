@@ -6,5 +6,3 @@ require 'pry'
 require 'net/http'
 require 'json'
 require 'httparty'
-require "awesome_print"
-ap object, options = {}
