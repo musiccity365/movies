@@ -26,15 +26,9 @@ class CLI
 
                 # display a complete list of movies - move display_list_of_movies instance method up here
 
-                # sort_by release_date method - most recent year & oldest year (ascending & descending)
-            
-                # sort_by title method - alphabetically (ascending & descending)
+                # sort_by title method - alphabetically (ascending & descending) - create this in movie class
         
-                # sort_by rt_score method - highest score & lowest score (ascending & descending)
-
-                # select movies with same directors and producers
-
-                # select movies produced within the same year
+                # sort_by rt_score method - highest score & lowest score (ascending & descending) - create this in movie class
 
             # display the list
             display_list_of_movies # instance method
