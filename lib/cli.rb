@@ -20,7 +20,6 @@ class CLI
 
         # if the user says yes
         if user_input == "yes" || user_input == "y"
-            puts "\n"
             puts "Enter the selection of how you wish to view the list of movies!"
 
             # CASE STATEMENT ?
