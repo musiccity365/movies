@@ -46,7 +46,6 @@ class CLI
             
             menu # recursion - this is when a method is called within itself. In this case, the menu starts over again.
         else
-            puts "\n"
             puts "Goodbye!"    
         end
     end
