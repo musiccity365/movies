@@ -42,7 +42,7 @@ class CLI
 
     def ask_user_for_movie_choice
         # ask_user_for_movie_choice
-        puts "Enter the number of the movie you'd lke to know more about"
+        puts "Enter the number of the movie you'd like to know more about"
         index = gets.strip.to_i - 1
 
         # index valid? number between 0 and 19
@@ -69,7 +69,33 @@ class CLI
         puts "Release Date: " + movie.release_date
         puts "Score: " + movie.rt_score
         puts "Description: \n" + movie.description
+
+        release_date_instance = Movie.all[index]
+
+        sort_movie_by_release_date(release_date_instance)
+    end
+
+    # sort_by release_date method
+    def sort_movie_by_release_date(movie)
+        puts "Enter the list number for the year in which you'd like to see a list of movies"
+
+        index = gets.strip.to_i - 1
+
+        # index valid? number between 0 and 
+        until index.between?(0, Movie.all.length - 1)
+            # keep asking for user input
+            puts "Invalid entry! Please choose a valid number"
+            index = gets.strip.to_i - 1
+            
+        end
+
+
     end
 
     
+    # sort_by title method
+    
+    # sort_by rt_score method
+
+    # select movies with same directors and producers
 end
