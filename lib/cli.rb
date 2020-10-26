@@ -41,7 +41,6 @@ class CLI
             ask_user_for_movie_choice
 
             sleep(2)
-            puts "\n"
             
             menu # recursion - this is when a method is called within itself. In this case, the menu starts over again.
         else
