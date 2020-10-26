@@ -14,13 +14,13 @@ class CLI
         puts "\n"
         puts "Would you like to see the list of movies?"
         puts "\n"
-        puts "Type 'yes' or 'y' to continue or any other key to exit"
+        puts "Type 'yes' or 'y' to continue or type any other key to exit, then press enter/return!"
 
         user_input = gets.strip.downcase
 
         # if the user says yes
         if user_input == "yes" || user_input == "y"
-            puts "Enter the selection of how you wish to view the list of movies!"
+            puts "Enter the selection of how you wish to view the list of movies, then press enter/return!"
 
             # CASE STATEMENT ?
 
@@ -61,14 +61,14 @@ class CLI
     def ask_user_for_movie_choice
         # ask_user_for_movie_choice
         puts "\n"
-        puts "Enter the number of the movie you'd like to know more about"
+        puts "Enter the number of the movie you'd like to know more about, then press enter/return!"
         index = gets.strip.to_i - 1
 
         # index valid? number between 0 and 19
         until index.between?(0, Movie.all.length - 1)
             # keep asking for user input
             puts "\n"
-            puts "Invalid entry! Please choose a valid number"
+            puts "Invalid entry! Please choose a valid number, then press enter/return!"
             index = gets.strip.to_i - 1
         end
 
@@ -95,7 +95,7 @@ class CLI
 
     # sort_by release_date method
     # def ask_user_for_release_date
-    #     puts "Enter the list number for the year in which you'd like to see a list of movies"
+    #     puts "Enter the list number for the year in which you'd like to see a list of movies, then press  enter/return!"
     #     index = gets.strip.to_i - 1
         
     #     # index valid? number between 0 and 
