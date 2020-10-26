@@ -63,8 +63,8 @@ class CLI
         # binding.pry
         sleep(1)
         puts "\n"
-        puts movie.title
-        puts "Description: " + movie.description
+        puts "Title: " + movie.title
+        puts "Description: \n" + movie.description
         puts "Director: " + movie.director
         puts "Producer: " + movie.producer
         puts "Release Date: " + movie.release_date
