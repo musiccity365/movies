@@ -2,7 +2,7 @@
 
 require_relative "../environment"
 
-puts "hi"
+puts "Hello there, \n"
 
 cli_instance = CLI.new
 cli_instance.start

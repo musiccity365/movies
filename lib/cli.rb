@@ -3,7 +3,7 @@ class CLI
     # ALL CLI METHODS ARE INSTANCE METHODS
 
     def start
-        puts "Welcome"
+        puts "Welcome to the movie list app"
         API.fetch_movies # grabs info from API and creates instances
         self.menu # CLI INSTANCE
     end
@@ -21,11 +21,13 @@ class CLI
 
             # CASE STATEMENT ?
 
-                # sort_by release_date method
+                # display a complete list of movies - move display_list_of_movies instance method up here
+
+                # sort_by release_date method - most recent year & oldest year (ascending & descending)
             
-                # sort_by title method
+                # sort_by title method - alphabetically (ascending & descending)
         
-                # sort_by rt_score method
+                # sort_by rt_score method - highest score & lowest score (ascending & descending)
 
                 # select movies with same directors and producers
 
@@ -87,34 +89,36 @@ class CLI
     # OPTIONAL METHODS FOR USER INPUT
 
     # sort_by release_date method
-    def ask_user_for_release_date
-        puts "Enter the list number for the year in which you'd like to see a list of movies"
-        index = gets.strip.to_i - 1
+    # def ask_user_for_release_date
+    #     puts "Enter the list number for the year in which you'd like to see a list of movies"
+    #     index = gets.strip.to_i - 1
         
-        # index valid? number between 0 and 
-        until index.between?(0, Movie.release_date.length - 1)
-            # keep asking for user input
-            puts "Invalid entry! Please choose a valid number"
-            index = gets.strip.to_i - 1
-        end
+    #     # index valid? number between 0 and 
+    #     until index.between?(0, Movie.release_date.length - 1)
+    #         # keep asking for user input
+    #         puts "Invalid entry! Please choose a valid number"
+    #         index = gets.strip.to_i - 1
+    #     end
         
-            movie_instance = Movie.all[index]
+    #         movie_instance = Movie.all[index]
         
-            display_movie_by_release_date(movie_instance)
-    end
+    #         display_movie_by_release_date(movie_instance)
+    # end
 
-    def display_list_of_movies_by_release_date(movie)
-        # Access all the movies
-        # binding.pry
-        # print each one out
-        Movie.all.each.with_index(1) do |movie, index| 
-            puts "#{index}. #{movie.release_date}"
-        end
-    end
-    
-    # sort_by title method
-    
-    # sort_by rt_score method
+    # def display_list_of_movies_by_release_date(movie)
+    #     # Access all the movies
+    #     # binding.pry
+    #     # print each one out
+    #     Movie.all.each.with_index(1) do |movie, index| 
+    #         puts "#{index}. #{movie.release_date}"
+    #     end
+    # end
+
+    # sort_by release_date method - most recent year & oldest year (ascending & descending)
+                    
+    # sort_by title method - alphabetically (ascending & descending)
+                
+    # sort_by rt_score method - highest score & lowest score (ascending & descending)
 
     # select movies with same directors and producers
 
