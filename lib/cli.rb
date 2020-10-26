@@ -3,6 +3,7 @@ class CLI
     # ALL CLI METHODS ARE INSTANCE METHODS
 
     def start
+        puts "\n"
         puts "Welcome to the movie list app"
         API.fetch_movies # grabs info from API and creates instances
         self.menu # CLI INSTANCE
@@ -10,13 +11,16 @@ class CLI
 
     def menu 
         # give user the option to see list of movies
+        puts "\n"
         puts "Would you like to see the list of movies?"
-        puts "Type 'yes' to continue or any other key to exit"
+        puts "\n"
+        puts "Type 'yes' or 'y' to continue or any other key to exit"
 
         user_input = gets.strip.downcase
 
         # if the user says yes
         if user_input == "yes" || user_input == "y"
+            puts "\n"
             puts "Enter the selection of how you wish to view the list of movies!"
 
             # CASE STATEMENT ?
@@ -39,9 +43,10 @@ class CLI
 
             sleep(2)
             puts "\n"
-
+            
             menu # recursion - this is when a method is called within itself. In this case, the menu starts over again.
         else
+            puts "\n"
             puts "Goodbye!"    
         end
     end
@@ -50,6 +55,7 @@ class CLI
         # Access all the movies
         # binding.pry
         # print each one out
+        puts "\n"
         Movie.all.each.with_index(1) do |movie, index| 
             puts "#{index}. #{movie.title}"
         end
@@ -57,12 +63,14 @@ class CLI
 
     def ask_user_for_movie_choice
         # ask_user_for_movie_choice
+        puts "\n"
         puts "Enter the number of the movie you'd like to know more about"
         index = gets.strip.to_i - 1
 
         # index valid? number between 0 and 19
         until index.between?(0, Movie.all.length - 1)
             # keep asking for user input
+            puts "\n"
             puts "Invalid entry! Please choose a valid number"
             index = gets.strip.to_i - 1
         end
