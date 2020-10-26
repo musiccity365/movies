@@ -8,21 +8,21 @@ class API
         
         ## NOTE: MAKE INSTANCES OF API DATA!!!
         # title -  name
-        # description - info
         # director - name
         # producer - name
         # release_date - integer
         # rt_score - integer
-        # :id, :title, :year, :score
+        # description - info
+        # :title, :director, :producer, :release_date, :rt_score, :description
         
         array_of_movies.each do |movie_hash|
             movie = Movie.new
             movie.title = movie_hash["title"]
-            movie.description = movie_hash["description"]
             movie.director = movie_hash["director"]
             movie.producer = movie_hash["producer"]
             movie.release_date = movie_hash["release_date"]
             movie.rt_score = movie_hash["rt_score"]
+            movie.description = movie_hash["description"]
         end
         # binding.pry
     end

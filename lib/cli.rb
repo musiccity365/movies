@@ -64,11 +64,11 @@ class CLI
         sleep(1)
         puts "\n"
         puts "Title: " + movie.title
-        puts "Description: \n" + movie.description
         puts "Director: " + movie.director
         puts "Producer: " + movie.producer
         puts "Release Date: " + movie.release_date
         puts "Score: " + movie.rt_score
+        puts "Description: \n" + movie.description
     end
 
     
