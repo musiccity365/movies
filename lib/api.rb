@@ -11,7 +11,7 @@ class API
         # director - name
         # producer - name
         # release_date - integer
-        # rt_score - integer
+        # rt_score - float
         # description - info
         # :title, :director, :producer, :release_date, :rt_score, :description
         

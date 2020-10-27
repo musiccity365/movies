@@ -12,14 +12,15 @@ class CLI
     def menu 
         # give user the option to see list of movies
         puts "\n"
-        puts "MAIN MENU - Please enter a selection number from the list below to continue or type any other key to exit, then press enter/return!"
-
+        puts "MAIN MENU - Please enter a selection number (0-4) from the list below to continue or type any other key to exit, then press enter/return!"
         user_input = gets.strip.downcase.to_i
-
-        # if the user says yes
+        # puts "\n"
+        # hash = Hash.new
+        # user_input.each.with_index do |item, index|
+        #     puts hash[item] = index
+        # end
         case user_input
         when 0
-            # puts "Enter the selection of how you wish to view the list of movies, then press enter/return!"
             # display the list
             display_list_of_movies # instance method
             ask_user_for_movie_choice
