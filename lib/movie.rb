@@ -15,7 +15,12 @@ class Movie
 
     # sort_by title method - alphabetically (ascending & descending)
     def sort_by_title(title)
-        
+        self.all.select { |i| i.sort 
+            puts i 
+            
+            binding.pry
+            
+        }
     end
                     
     # sort_by rt_score method - highest score & lowest score (ascending & descending)
