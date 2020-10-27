@@ -27,13 +27,13 @@ class Movie
 
     def self.sort_rt_score_asc
         self.all.sort do |a, b| 
-            a.rt_score <=> b.rt_score 
+            a.rt_score.to_f <=> b.rt_score.to_f 
         end
     end
 
     def self.sort_rt_score_desc
         self.all.sort do |a, b| 
-            b.rt_score <=> a.rt_score 
+            b.rt_score.to_f <=> a.rt_score.to_f 
         end
     end
 end
