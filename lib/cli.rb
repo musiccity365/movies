@@ -14,13 +14,24 @@ class CLI
         puts "\n"
         puts "Would you like to see the list of movies?"
         puts "\n"
-        puts "Type 'yes' or 'y' to continue or type any other key to exit, then press enter/return!"
+        puts "Enter a selection number from the list below to continue or type any other key to exit, then press enter/return!"
 
-        user_input = gets.strip.downcase
+        user_input = gets.strip.downcase.to_i
 
         # if the user says yes
-        if user_input == "yes" || user_input == "y"
+        case user_input
+        when 0
             puts "Enter the selection of how you wish to view the list of movies, then press enter/return!"
+            # display the list
+            display_list_of_movies # instance method
+            ask_user_for_movie_choice
+            sleep(2)
+            menu # recursion - this is when a method is called within itself. In this case, the menu starts over again.
+        when 1
+            display_sorted_title_asc
+        else
+            puts "Goodbye!"
+        end 
 
             # CASE STATEMENT ?
 
@@ -30,24 +41,16 @@ class CLI
         
                 # sort_by rt_score method - highest score & lowest score (ascending & descending) - create this in movie class
 
-            # display the list
-            display_list_of_movies # instance method
-            ask_user_for_movie_choice
 
-            sleep(2)
-            
-            menu # recursion - this is when a method is called within itself. In this case, the menu starts over again.
-        else
-            puts "Goodbye!"    
-        end
+        
     end
 
     def display_list_of_movies
         # Access all the movies
-        # binding.pry
         # print each one out
         puts "\n"
         Movie.all.each.with_index(1) do |movie, index| 
+            # binding.pry
             puts "#{index}. #{movie.title}"
         end
     end
@@ -85,4 +88,8 @@ class CLI
         puts "Description: \n" + movie.description
     end
 
+    def display_sorted_title_asc
+        Movie.sort_title_asc
+        binding.pry
+    end
 end
