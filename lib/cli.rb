@@ -12,16 +12,14 @@ class CLI
     def menu 
         # give user the option to see list of movies
         puts "\n"
-        puts "Would you like to see the list of movies?"
-        puts "\n"
-        puts "Enter a selection number from the list below to continue or type any other key to exit, then press enter/return!"
+        puts "Please enter a selection number from the list below to continue or type any other key to exit, then press enter/return!"
 
         user_input = gets.strip.downcase.to_i
 
         # if the user says yes
         case user_input
         when 0
-            puts "Enter the selection of how you wish to view the list of movies, then press enter/return!"
+            # puts "Enter the selection of how you wish to view the list of movies, then press enter/return!"
             # display the list
             display_list_of_movies # instance method
             ask_user_for_movie_choice
@@ -29,20 +27,16 @@ class CLI
             menu # recursion - this is when a method is called within itself. In this case, the menu starts over again.
         when 1
             display_sorted_title_asc
+            sleep(2)
+            menu 
+        when 2
+            display_sorted_title_desc
+            sleep(2)
+            menu 
         else
             puts "Goodbye!"
-        end 
-
-            # CASE STATEMENT ?
-
-                # display a complete list of movies - move display_list_of_movies instance method up here
-
-                # sort_by title method - alphabetically (ascending & descending) - create this in movie class
-        
+        end  
                 # sort_by rt_score method - highest score & lowest score (ascending & descending) - create this in movie class
-
-
-        
     end
 
     def display_list_of_movies
@@ -89,7 +83,18 @@ class CLI
     end
 
     def display_sorted_title_asc
-        Movie.sort_title_asc
-        binding.pry
+        puts "\n"
+        Movie.sort_title_asc.each.with_index(1) do |movie, index| 
+            # binding.pry
+            puts "#{index}. #{movie.title}"
+        end
+    end
+
+    def display_sorted_title_desc
+        puts "\n"
+        Movie.sort_title_desc.each.with_index(1) do |movie, index| 
+            # binding.pry
+            puts "#{index}. #{movie.title}"
+        end
     end
 end
