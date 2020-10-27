@@ -14,6 +14,9 @@ class Movie
     # OPTIONAL METHODS FOR USER INPUT
 
     # sort_by title method - alphabetically (ascending & descending)
+    def sort_by_title(title)
+        
+    end
                     
     # sort_by rt_score method - highest score & lowest score (ascending & descending)
 end
