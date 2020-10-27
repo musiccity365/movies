@@ -12,7 +12,7 @@ class CLI
     def menu 
         # give user the option to see list of movies
         puts "\n"
-        puts "Please enter a selection number from the list below to continue or type any other key to exit, then press enter/return!"
+        puts "MAIN MENU - Please enter a selection number from the list below to continue or type any other key to exit, then press enter/return!"
 
         user_input = gets.strip.downcase.to_i
 
@@ -33,10 +33,17 @@ class CLI
             display_sorted_title_desc
             sleep(2)
             menu 
+        when 3
+            display_sorted_rt_score_asc
+            sleep(2)
+            menu 
+        when 4
+            display_sorted_rt_score_desc
+            sleep(2)
+            menu 
         else
             puts "Goodbye!"
         end  
-                # sort_by rt_score method - highest score & lowest score (ascending & descending) - create this in movie class
     end
 
     def display_list_of_movies
@@ -95,6 +102,22 @@ class CLI
         Movie.sort_title_desc.each.with_index(1) do |movie, index| 
             # binding.pry
             puts "#{index}. #{movie.title}"
+        end
+    end
+
+    def display_sorted_rt_score_asc
+        puts "\n"
+        Movie.sort_rt_score_asc.each.with_index(1) do |movie, index| 
+            # binding.pry
+            puts "#{index}. #{movie.title} - " + movie.rt_score
+        end
+    end
+
+    def display_sorted_rt_score_desc
+        puts "\n"
+        Movie.sort_rt_score_desc.each.with_index(1) do |movie, index| 
+            # binding.pry
+            puts "#{index}. #{movie.title} - " + movie.rt_score
         end
     end
 end

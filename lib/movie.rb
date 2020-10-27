@@ -11,9 +11,6 @@ class Movie
         @@all
     end
 
-    # OPTIONAL METHODS FOR USER INPUT
-
-    # sort_by title method - alphabetically (ascending & descending)
     def self.sort_title_asc
         self.all.sort do |a, b| 
             a.title <=> b.title 
@@ -27,12 +24,16 @@ class Movie
             # binding.pry
         end
     end
-    # sort_by rt_score method - highest score & lowest score (ascending & descending)
-    def self.sort_score_asc(array)
-        array.sort { |a, b| a.rt_score <=> b.rt_score }
+
+    def self.sort_rt_score_asc
+        self.all.sort do |a, b| 
+            a.rt_score <=> b.rt_score 
+        end
     end
 
-    def self.sort_score_desc(array)
-        array.sort { |a, b| b.rt_score <=> a.rt_score }
+    def self.sort_rt_score_desc
+        self.all.sort do |a, b| 
+            b.rt_score <=> a.rt_score 
+        end
     end
 end
