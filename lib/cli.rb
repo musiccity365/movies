@@ -13,11 +13,14 @@ class CLI
         # give user the option to see list of movies
         puts "\n"
         puts "MAIN MENU - Please enter a selection number (0-4) from the list below to continue or type any other key to exit, then press enter/return!"
+        puts "\n"
+        puts "To view a complete list of movies in ascending alphabetical order, press 1"
+        puts "To view a complete list of movies in descending alphabetical order, press 2"
+        puts "To view a complete list of movies by rating in ascending order, press 3"
+        puts "To view a complete list of movies by rating in descending order, press 4"
+        puts "To view a complete list of movies, press 0"
+        puts "\n"
         user_input = gets.strip.downcase.to_i
-        puts "To view a list of movies in ascending alphabetical order, press 1"
-        puts "To view a list of movies in descending alphabetical order, press 2"
-        puts "To view a list of movies by rating in ascending order, press 3"
-        puts "To view a list of movies by rating in descending order, press 4"
         case user_input
         when 0
             # display the list
