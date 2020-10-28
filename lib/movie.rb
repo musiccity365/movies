@@ -14,14 +14,12 @@ class Movie
     def self.sort_title_asc
         self.all.sort do |a, b| 
             a.title <=> b.title 
-            # binding.pry
         end
     end
        
     def self.sort_title_desc
         self.all.sort do |a, b| 
             b.title <=> a.title 
-            # binding.pry
         end
     end
 
