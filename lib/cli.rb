@@ -14,11 +14,10 @@ class CLI
         puts "\n"
         puts "MAIN MENU - Please enter a selection number (0-4) from the list below to continue or type any other key to exit, then press enter/return!"
         user_input = gets.strip.downcase.to_i
-        # puts "\n"
-        # hash = Hash.new
-        # user_input.each.with_index do |item, index|
-        #     puts hash[item] = index
-        # end
+        puts "To view a list of movies in ascending alphabetical order, press 1"
+        puts "To view a list of movies in descending alphabetical order, press 2"
+        puts "To view a list of movies by rating in ascending order, press 3"
+        puts "To view a list of movies by rating in descending order, press 4"
         case user_input
         when 0
             # display the list
