@@ -42,7 +42,7 @@ class CLI
             menu 
         else
             puts "\n"
-            puts "Goodbye!"
+            puts "Thank you, Goodbye!"
         end  
     end
 
