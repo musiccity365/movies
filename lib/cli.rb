@@ -15,7 +15,7 @@ class CLI
         puts "To view a complete list of movies in descending alphabetical order, press 2"
         puts "To view a complete list of movies by rating in ascending order, press 3"
         puts "To view a complete list of movies by rating in descending order, press 4"
-        puts "To view a complete list of movies, press 0"
+        puts "To view a complete list of movies with additional options, press 0"
         puts "\n"
         user_input = gets.strip.downcase.to_i
         case user_input
