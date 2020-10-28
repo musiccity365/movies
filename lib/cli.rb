@@ -41,6 +41,7 @@ class CLI
             sleep(2)
             menu 
         else
+            puts "\n"
             puts "Goodbye!"
         end  
     end
