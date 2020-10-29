@@ -1,6 +1,6 @@
 # Movies_CLI
 
-Movies_CLI is a Ruby API library for storing movie instances along with their associated attributes. Listing out movie titles and allowing users to obtain more details about the movie. 
+Movies_CLI is a Ruby API library for storing movie instances along with their associated attributes. Listing out movie titles and allowing users to obtain more details about the movie.
 
 ## Installation
 
