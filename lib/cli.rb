@@ -9,7 +9,9 @@ class CLI
 
     def menu 
         puts "\n"
-        puts "MAIN MENU - Please enter a selection number (1-5) from the list below to continue or type any other key to exit, then press enter/return!"
+        puts "---------------MAIN MENU--------------"
+        puts ""
+        puts "Please enter a selection number (1-5) from the list below to continue or type any other key to exit, then press enter/return!"
         puts "\n"
         puts "To view a complete list of movies, press 1"
         puts "To view a complete list of movies in ascending alphabetical order, press 2"
