@@ -1,20 +1,16 @@
 # Movies_CLI
 
-Movies_CLI is a Ruby API library for storing movie instances along with their associated attributes.
+Movies_CLI is a Ruby API library for storing movie instances along with their associated attributes. Listing out movie titles and allowing users to obtain more details about the movie. 
 
 ## Installation
 
-To install this repository, you have 3 options:
+To install this repository:
 
-1. https: <https://github.com/musiccity365/movies.git>
-2. ssh: git@github.com:musiccity365/movies.git
-3. GitHub CLI: gh repo clone musiccity365/movies
+git clone git@github.com:musiccity365/movies.git "directory_name"
 
 ## Usage
 
-```ruby
-
-```
+To run this program, navigate to the directory 'cd /movies' in your terminal, then type 'ruby bin/run'
 
 ## Contributing
 

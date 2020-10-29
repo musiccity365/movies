@@ -11,32 +11,32 @@ class CLI
         puts "\n"
         puts "MAIN MENU - Please enter a selection number (0-4) from the list below to continue or type any other key to exit, then press enter/return!"
         puts "\n"
-        puts "To view a complete list of movies in ascending alphabetical order, press 1"
-        puts "To view a complete list of movies in descending alphabetical order, press 2"
-        puts "To view a complete list of movies by rating in ascending order, press 3"
-        puts "To view a complete list of movies by rating in descending order, press 4"
-        puts "To view a complete list of movies, press 0"
+        puts "To view a complete list of movies, press 1"
+        puts "To view a complete list of movies in ascending alphabetical order, press 2"
+        puts "To view a complete list of movies in descending alphabetical order, press 3"
+        puts "To view a complete list of movies by rating in ascending order, press 4"
+        puts "To view a complete list of movies by rating in descending order, press 5"
         puts "\n"
-        user_input = gets.strip.downcase.to_i
+        user_input = gets.strip.to_i
         case user_input
-        when 0
+        when 1
             display_list_of_movies 
             ask_user_for_movie_choice
             sleep(2)
             menu 
-        when 1
+        when 2
             display_sorted_title_asc
             sleep(2)
             menu 
-        when 2
+        when 3
             display_sorted_title_desc
             sleep(2)
             menu 
-        when 3
+        when 4
             display_sorted_rt_score_asc
             sleep(2)
             menu 
-        when 4
+        when 5
             display_sorted_rt_score_desc
             sleep(2)
             menu 
@@ -57,6 +57,8 @@ class CLI
         puts "\n"
         puts "Enter the number of the movie you'd like to know more about, then press enter/return!"
         index = gets.strip.to_i - 1
+        
+        
         until index.between?(0, Movie.all.length - 1)
             puts "\n"
             puts "Invalid entry! Please choose a valid number, then press enter/return!"
