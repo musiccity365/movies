@@ -64,7 +64,6 @@ class CLI
         puts ""
         index = gets.strip.to_i - 1
         
-        
         until index.between?(0, Movie.all.length - 1)
             puts ""
             puts "Invalid entry! Please choose a valid number, then press enter/return!"
