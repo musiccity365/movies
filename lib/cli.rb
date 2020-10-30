@@ -8,18 +8,6 @@ class CLI
     end
 
     def menu 
-<<<<<<< HEAD
-        puts "\n"
-        puts "MAIN MENU - Please enter a selection number (0-4) from the list below to continue or type any other key to exit, then press enter/return!"
-        puts "\n"
-        puts "To view a complete list of movies in ascending alphabetical order, press 1"
-        puts "To view a complete list of movies in descending alphabetical order, press 2"
-        puts "To view a complete list of movies by rating in ascending order, press 3"
-        puts "To view a complete list of movies by rating in descending order, press 4"
-        puts "To view a complete list of movies with additional options, press 0"
-        puts "\n"
-        user_input = gets.strip.downcase.to_i
-=======
         puts ""
         puts "---------------MAIN MENU--------------"
         puts ""
@@ -32,7 +20,6 @@ class CLI
         puts "To view a complete list of movies by rating in descending order, press 5"
         puts ""
         user_input = gets.strip.to_i
->>>>>>> d13c6a4b9a3cc923f24a74aa3dd6917c95c137a7
         case user_input
         when 1
             display_list_of_movies 
