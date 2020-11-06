@@ -13,11 +13,11 @@ class CLI
         puts ""
         puts "Please enter a selection number (1-5) from the list below to continue or type any other key to exit, then press enter/return!"
         puts ""
-        puts "To view a complete list of movies, press 1"
-        puts "To view a complete list of movies in ascending alphabetical order, press 2"
-        puts "To view a complete list of movies in descending alphabetical order, press 3"
-        puts "To view a complete list of movies by rating in ascending order, press 4"
-        puts "To view a complete list of movies by rating in descending order, press 5"
+        puts "1. To view a complete list of movies"
+        puts "2. To view a complete list of movies in ascending alphabetical order"
+        puts "3. To view a complete list of movies in descending alphabetical order"
+        puts "4. To view a complete list of movies by rating in ascending order"
+        puts "5. To view a complete list of movies by rating in descending order"
         puts ""
         user_input = gets.strip.to_i
         case user_input
