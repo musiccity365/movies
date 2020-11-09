@@ -3,13 +3,7 @@ class Movie
     
     @@all = []
 
-    def initialize(title, director, producer, release_date, rt_score, description)
-        @title = title
-        @director = director
-        @producer = producer 
-        @release_date = release_date
-        @rt_score = rt_score
-        @description = description
+    def initialize
         @@all << self
     end
 
